@@ -1,0 +1,31 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.getJSON = void 0;
+
+// Store all the helper functions that can be used in all the scripts
+// After number of sec, returns rejected promise
+const timeout = function (s) {
+  return new Promise(function (_, reject) {
+    setTimeout(function () {
+      reject(new Error(`Request took too long! Timeout after ${s} second`));
+    }, s * 1000);
+  });
+};
+
+const getJSON = async function (url) {
+  try {
+    const res = await Promise.race([fetch(url), timeout(0.4)]); // const res = await fetch(url);
+
+    const data = await res.json();
+    if (!res.ok) throw Error(`${data.message} (${res.status})`);
+    return data;
+  } catch (err) {
+    // Pass the error to higher level function; loadRecipe
+    throw err;
+  }
+};
+
+exports.getJSON = getJSON;
