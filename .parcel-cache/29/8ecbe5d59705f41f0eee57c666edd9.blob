@@ -1,0 +1,130 @@
+"use strict";
+
+require("core-js/modules/es.typed-array.float32-array.js");
+
+require("core-js/modules/es.typed-array.float64-array.js");
+
+require("core-js/modules/es.typed-array.int8-array.js");
+
+require("core-js/modules/es.typed-array.int16-array.js");
+
+require("core-js/modules/es.typed-array.int32-array.js");
+
+require("core-js/modules/es.typed-array.uint8-array.js");
+
+require("core-js/modules/es.typed-array.uint8-clamped-array.js");
+
+require("core-js/modules/es.typed-array.uint16-array.js");
+
+require("core-js/modules/es.typed-array.uint32-array.js");
+
+require("core-js/modules/es.typed-array.from.js");
+
+require("core-js/modules/es.typed-array.of.js");
+
+require("core-js/modules/web.immediate.js");
+
+require("core-js/modules/web.url.js");
+
+require("core-js/modules/web.url.to-json.js");
+
+require("core-js/modules/web.url-search-params.js");
+
+var model = _interopRequireWildcard(require("./model.js"));
+
+var _recipeView = _interopRequireDefault(require("./views/recipeView.js"));
+
+var _searchView = _interopRequireDefault(require("./views/searchView.js"));
+
+var _resultsView = _interopRequireDefault(require("./views/resultsView.js"));
+
+var _paginationView = _interopRequireDefault(require("./views/paginationView.js"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _getRequireWildcardCache() { if (typeof WeakMap !== "function") return null; var cache = new WeakMap(); _getRequireWildcardCache = function () { return cache; }; return cache; }
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+// {state, loadRecipe, ..}
+// instance of Class. Can name any name.
+// Convert async await to ES5
+// if (module.hot) {
+//   module.hot.accept();
+// }
+// Address of API
+// https://forkify-api.herokuapp.com/v2
+///////////////////////////////////////
+//! Rendering recipe
+const controlRecipes = async function () {
+  try {
+    const id = window.location.hash.slice(1); // Request 할 때에는 #이 필요없다.
+
+    if (!id) return;
+
+    _recipeView.default.renderSpinner(); // 1) Loading recipe : Updating a recipe state in Model
+    // Since it's a async function, need to wait until it fatched.
+
+
+    await model.loadRecipe(id); // 2) Rendering recipe : Render a page using recipe in state
+
+    _recipeView.default.render(model.state.recipe);
+  } catch (err) {
+    // display a error message
+    _recipeView.default.renderError();
+  }
+
+  controlServings();
+}; //! Rendering search results on sidebar
+
+
+const controlSearchRecipe = async function (e) {
+  try {
+    _resultsView.default.renderSpinner(); // 1) Get search query
+
+
+    const query = _searchView.default.getQuery();
+
+    if (!query) return; // 2) Load search results
+
+    await model.loadSearchResults(query); // 3) Render results
+
+    _resultsView.default.render(model.getSearchResultsPage()); // 4) Render initial pagination
+
+
+    _paginationView.default.render(model.state.search);
+  } catch (err) {
+    console.log(err);
+  }
+}; //! Rendering Page buttons
+
+
+const controlPagination = function (goToPage) {
+  // 3) Render new results
+  _resultsView.default.render(model.getSearchResultsPage(goToPage)); // 4) Render new initial pagination
+
+
+  _paginationView.default.render(model.state.search);
+}; //! Change serving counts: Update UI & state
+
+
+const controlServings = function () {
+  // Update the recipe servings (in state)
+  model.updateServings(8); // Update the UI
+
+  _recipeView.default.render(model.state.recipe);
+};
+
+const init = function () {
+  // Publisher : addHandlerRender
+  // Subscriber : controlRecipes
+  _recipeView.default.addHandlerRender(controlRecipes);
+
+  _searchView.default.addHandlerSearch(controlSearchRecipe);
+
+  _paginationView.default.addHandlerClick(controlPagination);
+};
+
+init(); // ['hashchange', 'load'].forEach(ev =>
+//   window.addEventListener(ev, controlRecipes)
+// );

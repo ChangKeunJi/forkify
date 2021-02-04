@@ -56,7 +56,7 @@
 131C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\postcss-modules-values\node_modules\postcss\docs\guidelines\runner.md121436361000000000 0
 73C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\json-schema132566992623786718 1
 84C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\lodash\_cloneSymbol.js121436361000000000 0
-53C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist132568853673829077 1
+53C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist132568911414454922 1
 121C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\util.promisify\node_modules\es-abstract\2016\ToPrimitive.js121436361000000000 0
 79C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\jsesc\man\jsesc.1121436361000000000 0
 73C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\assert-plus132566992647995872 1
@@ -196,7 +196,7 @@
 133C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\@babel\helper-validator-identifier\scripts\generate-identifier-regex.js121012626000000000 0
 74C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\isbinaryfile132566992626199353 1
 57C:\Users\ckdrm\Desktop\Coding\javascript\forkify\src\sass132517746307950034 1
-72C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\icons.da1a714c.svg132568853673678681 0
+72C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\icons.da1a714c.svg132568911413766751 0
 101C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\purgecss\node_modules\commander\typings132566992244211096 1
 122C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\util.promisify\node_modules\es-abstract\2018\IsExtensible.js121436361000000000 0
 124C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\stylehacks\node_modules\postcss-selector-parser\dist\parser.js121436361000000000 0
@@ -304,7 +304,7 @@
 86C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\dom-serializer\README.md121436361000000000 0
 74C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\asn1\LICENSE131627656510000000 0
 110C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\regenerate-unicode-properties\Script\Ugaritic.js121436361000000000 0
-69C:\Users\ckdrm\Desktop\Coding\javascript\forkify\src\js\controller.js132568853671903008 0
+69C:\Users\ckdrm\Desktop\Coding\javascript\forkify\src\js\controller.js132568911309016529 0
 76C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\string_decoder132566992596029827 1
 101C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\resolve\.github\workflows\node-zero.yml121436361000000000 0
 125C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\util.promisify\node_modules\es-abstract\2016\SetFunctionName.js121436361000000000 0
@@ -341,7 +341,7 @@
 98C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\resolve\test\resolver\incorrect_main132566992373424727 1
 105C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\@parcel\core\lib\TargetDescriptor.schema.js121436361000000000 0
 71C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\is-symbol132566992626568379 1
-64C:\Users\ckdrm\Desktop\Coding\javascript\forkify\src\js\model.js132568851967284779 0
+64C:\Users\ckdrm\Desktop\Coding\javascript\forkify\src\js\model.js132568893430301094 0
 89C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\whatwg-encoding\LICENSE.txt121436361000000000 0
 84C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\xml-name-validator\lib132566992112494416 1
 103C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\@parcel\source-map\src\wasm\SourceMap.cpp121436361000000000 0
@@ -372,7 +372,7 @@
 128C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\util.promisify\node_modules\es-abstract\2018\InstanceofOperator.js121436361000000000 0
 99C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\@babel\runtime\helpers\createSuper.js121012626000000000 0
 74C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\resolve-from132566992606636896 1
-79C:\Users\ckdrm\Desktop\Coding\javascript\forkify\src\js\views\paginationView.js132568813835162253 0
+79C:\Users\ckdrm\Desktop\Coding\javascript\forkify\src\js\views\paginationView.js132568860946924306 0
 86C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\aws4\.github\FUNDING.yml121436361000000000 0
 91C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\csso\lib\clean\Declaration.js121436361000000000 0
 98C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\lodash\_createRelationalOperation.js121436361000000000 0
@@ -387,7 +387,7 @@
 100C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\@parcel\core\src\public\Environment.js121436361000000000 0
 80C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\is-data-descriptor132566992627801131 1
 111C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\@nodelib\fs.scandir\out\adapters\fs.spec.d.ts.map121436361000000000 0
-75C:\Users\ckdrm\Desktop\Coding\javascript\forkify\src\js\views\recipeView.js132568186883673975 0
+75C:\Users\ckdrm\Desktop\Coding\javascript\forkify\src\js\views\recipeView.js132568911405870276 0
 121C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\util.promisify\node_modules\es-abstract\helpers\getProto.js121436361000000000 0
 88C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\es-abstract\2018\ToInt8.js121436361000000000 0
 104C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\snapdragon\node_modules\debug\src\index.js131505605660000000 0
@@ -4075,7 +4075,7 @@
 97C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\path-browserify\.github\FUNDING.yml121436361000000000 0
 123C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\util.promisify\node_modules\es-abstract\2018\ToPropertyKey.js121436361000000000 0
 92C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\es6-object-assign\package.json132566992637290857 0
-76C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\controller.e51e8c1b.js132568853673728746 0
+76C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\controller.e51e8c1b.js132568911413936261 0
 118C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\util.promisify\node_modules\es-abstract\2018\ToUint16.js121436361000000000 0
 129C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\@parcel\core\test\fixtures\targets-default-distdir-two\package.json121436361000000000 0
 84C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\lodash\fp\toInteger.js121436361000000000 0
@@ -9703,7 +9703,7 @@
 96C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\highlight.js\lib\languages\haml.js131406724530000000 0
 80C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\lodash\padStart.js121436361000000000 0
 113C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\jsdom\lib\jsdom\browser\resources\resource-queue.js121436361000000000 0
-71C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\main.4d91d9ee.css132568853673678681 0
+71C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\main.4d91d9ee.css132568911413816598 0
 79C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\lodash\partial.js121436361000000000 0
 84C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\lodash\partialRight.js121436361000000000 0
 84C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\lodash\fp\cloneDeep.js121436361000000000 0
@@ -13363,7 +13363,7 @@
 113C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\csso\node_modules\css-tree\lib\syntax\pseudo\common132566992319937370 1
 114C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\csso\node_modules\css-tree\lib\syntax\pseudo\lang.js121436361000000000 0
 119C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\csso\node_modules\css-tree\lib\syntax\pseudo\nth-child.js121436361000000000 0
-80C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\controller.e51e8c1b.js.map132568853673778999 0
+80C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\controller.e51e8c1b.js.map132568911414375104 0
 124C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\csso\node_modules\css-tree\lib\syntax\pseudo\nth-last-child.js121436361000000000 0
 126C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\csso\node_modules\css-tree\lib\syntax\pseudo\nth-last-of-type.js121436361000000000 0
 121C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\csso\node_modules\css-tree\lib\syntax\pseudo\nth-of-type.js121436361000000000 0
@@ -13999,7 +13999,7 @@
 108C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\caniuse-lite\data\features\css-focus-within.js121436361000000000 0
 103C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\core-js\stable\reflect\define-property.js121436361000000000 0
 115C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\core-js\stable\reflect\get-own-property-descriptor.js121436361000000000 0
-64C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\index.html132568853673678681 0
+64C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\index.html132568911413806619 0
 104C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\core-js\stable\reflect\get-prototype-of.js121436361000000000 0
 91C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\core-js\stable\reflect\get.js121436361000000000 0
 93C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\core-js\stable\reflect\index.js121436361000000000 0
@@ -17504,8 +17504,8 @@
 77C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\.bin\terser.ps1132566992662911680 0
 76C:\Users\ckdrm\Desktop\Coding\javascript\forkify\node_modules\.bin\which.ps1132566992664412358 0
 76C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\controller.31355abd.js132568186891857444 0
-74C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\favicon.677103e6.png132568774414571715 0
+74C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\favicon.677103e6.png132568854747143331 0
 74C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\favicon.6f50980b.png132568169430181649 0
-71C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\logo.0cfe0239.png132568853673678681 0
-75C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\main.4d91d9ee.css.map132568853673778999 0
+71C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\logo.0cfe0239.png132568911413836546 0
+75C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\main.4d91d9ee.css.map132568911413996102 0
 71C:\Users\ckdrm\Desktop\Coding\javascript\forkify\dist\main.79e05729.css132568186890187251 0

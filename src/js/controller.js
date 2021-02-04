@@ -68,10 +68,22 @@ const controlPagination = function (goToPage) {
   paginationView.render(model.state.search);
 };
 
+//! Change serving counts: Update UI & state
+const controlServings = function (newServings) {
+  // Update the recipe servings (in state)
+  model.updateServings(newServings);
+  // Update the UI
+  recipeView.render(model.state.recipe);
+
+  console.log(model.state.recipe);
+};
+
 const init = function () {
   // Publisher : addHandlerRender
   // Subscriber : controlRecipes
   recipeView.addHandlerRender(controlRecipes);
+
+  recipeView.addHandlerUpdateServings(controlServings);
 
   searchView.addHandlerSearch(controlSearchRecipe);
 
