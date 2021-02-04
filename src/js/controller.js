@@ -2,6 +2,7 @@ import * as model from './model.js'; // {state, loadRecipe, ..}
 import recipeView from './views/recipeView.js'; // instance of Class. Can name any name.
 import searchView from './views/searchView.js';
 import resultsView from './views/resultsView.js';
+import paginationView from './views/paginationView.js';
 
 import 'core-js/stable'; // Convert new features to ES5
 import 'regenerator-runtime/runtime'; // Convert async await to ES5
@@ -15,6 +16,7 @@ import 'regenerator-runtime/runtime'; // Convert async await to ES5
 
 ///////////////////////////////////////
 
+//! Rendering recipe
 const controlRecipes = async function () {
   try {
     const id = window.location.hash.slice(1);
@@ -24,11 +26,11 @@ const controlRecipes = async function () {
 
     recipeView.renderSpinner();
 
-    //! 1) Loading recipe : Updating a recipe state in Model
+    // 1) Loading recipe : Updating a recipe state in Model
     // Since it's a async function, need to wait until it fatched.
     await model.loadRecipe(id);
 
-    //! 2) Rendering recipe : Render a page using recipe in state
+    // 2) Rendering recipe : Render a page using recipe in state
     recipeView.render(model.state.recipe);
   } catch (err) {
     // display a error message
@@ -36,6 +38,7 @@ const controlRecipes = async function () {
   }
 };
 
+//! Rendering search results on sidebar
 const controlSearchRecipe = async function (e) {
   try {
     resultsView.renderSpinner();
@@ -47,10 +50,22 @@ const controlSearchRecipe = async function (e) {
     await model.loadSearchResults(query);
 
     // 3) Render results
-    resultsView.render(model.state.search.results);
+    resultsView.render(model.getSearchResultsPage());
+
+    // 4) Render initial pagination
+    paginationView.render(model.state.search);
   } catch (err) {
     console.log(err);
   }
+};
+
+//! Rendering Page buttons
+const controlPagination = function (goToPage) {
+  // 3) Render new results
+  resultsView.render(model.getSearchResultsPage(goToPage));
+
+  // 4) Render new initial pagination
+  paginationView.render(model.state.search);
 };
 
 const init = function () {
@@ -59,6 +74,8 @@ const init = function () {
   recipeView.addHandlerRender(controlRecipes);
 
   searchView.addHandlerSearch(controlSearchRecipe);
+
+  paginationView.addHandlerClick(controlPagination);
 };
 
 init();

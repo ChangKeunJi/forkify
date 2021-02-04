@@ -10,13 +10,6 @@ class ResultsView extends View {
   _errorMessage = 'No search results! 😥😥';
   _message = '';
 
-  //   render(data) {
-  //     this._data = data;
-  //     const markup = this._generateMarkup();
-  //     this._clear();
-  //     this._parentElement.insertAdjacentHTML('afterbegin', markup);
-  //   } => FROM VIEW
-
   _generateMarkup() {
     return this._data.map(this._generateMarkupPreview).join('');
   }
@@ -25,7 +18,7 @@ class ResultsView extends View {
     return ` <li class="preview">
     <a class="preview__link " href="#${result.id}">
       <figure class="preview__fig">
-        <img src="${result.image}" alt="Test" />
+        <img src="${result.image}" alt="Image" />
       </figure>
       <div class="preview__data">
         <h4 class="preview__title">${result.title}</h4>
