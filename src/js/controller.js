@@ -26,6 +26,9 @@ const controlRecipes = async function () {
 
     recipeView.renderSpinner();
 
+    // 0) Update results view to marked selected search result
+    resultsView.update(model.getSearchResultsPage());
+
     // 1) Loading recipe : Updating a recipe state in Model
     // Since it's a async function, need to wait until it fatched.
     await model.loadRecipe(id);
@@ -73,9 +76,18 @@ const controlServings = function (newServings) {
   // Update the recipe servings (in state)
   model.updateServings(newServings);
   // Update the UI
-  recipeView.render(model.state.recipe);
+  // recipeView.render(model.state.recipe);
+  recipeView.update(model.state.recipe);
+  //: Won't update image but only text & attribute
 
+  // console.log(model.state.recipe);
+};
+
+//! Adding bookmark
+const controlAddBookmark = function () {
+  model.addBookmark(model.state.recipe);
   console.log(model.state.recipe);
+  recipeView.update(model.state.recipe);
 };
 
 const init = function () {
@@ -88,6 +100,8 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchRecipe);
 
   paginationView.addHandlerClick(controlPagination);
+
+  recipeView.addHandlerBookmark(controlAddBookmark);
 };
 
 init();
