@@ -3,13 +3,15 @@ import icons from 'url:../../img/icons.svg';
 export default class View {
   _data;
 
-  render(data) {
+  render(data, render = true) {
     // Data doesn't exist or array is empty
     if (!data || (Array.isArray(data) && data.length === 0))
       return this.renderError();
-
     this._data = data;
     const markup = this._generateMarkup();
+
+    if (!render) return markup;
+
     this._clear();
     this._parentElement.insertAdjacentHTML('afterbegin', markup);
   }
@@ -30,8 +32,6 @@ export default class View {
     const curElements = Array.from(this._parentElement.querySelectorAll('*'));
     // Node list [...] => Array
 
-    // console.log(curElements);
-
     newElements.forEach((newEl, i) => {
       const curEl = curElements[i];
       // console.log(curEl, newEl.isEqualNode(curEl));
@@ -41,7 +41,7 @@ export default class View {
         !newEl.isEqualNode(curEl) &&
         newEl.firstChild?.nodeValue.trim() !== ''
       ) {
-        // console.log('💥', newEl.firstChild.nodeValue.trim());
+        // => If both nodes are not same & newEl node has a text value.
         curEl.textContent = newEl.textContent;
       }
 
