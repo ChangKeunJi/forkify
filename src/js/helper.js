@@ -13,7 +13,30 @@ const timeout = function (s) {
 
 export const getJSON = async function (url) {
   try {
-    const res = await Promise.race([fetch(url), timeout(TIMEOUT_SEC)]);
+    const fetchPro = fetch(url);
+
+    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
+
+    // const res = await fetch(url);
+    const data = await res.json();
+
+    if (!res.ok) throw Error(`${data.message} (${res.status})`);
+
+    return data;
+  } catch (err) {
+    // Pass the error to higher level function; loadRecipe
+    // Otherwise function returns nothing
+    throw err;
+  }
+};
+
+export const sendJSON = async function (url) {
+  try {
+    const fetchPro = fetch(url, {
+      method,
+    });
+
+    const res = await Promise.race([fetchPro, timeout(TIMEOUT_SEC)]);
 
     // const res = await fetch(url);
     const data = await res.json();

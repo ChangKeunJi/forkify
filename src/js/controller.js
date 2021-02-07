@@ -4,6 +4,7 @@ import searchView from './views/searchView.js';
 import resultsView from './views/resultsView.js';
 import paginationView from './views/paginationView.js';
 import bookmarkView from './views/bookmarkView.js';
+import addRecipeView from './views/addRecipeView.js';
 
 import 'core-js/stable'; // Convert new features to ES5
 import 'regenerator-runtime/runtime'; // Convert async await to ES5
@@ -105,6 +106,16 @@ const controlBookmarks = function () {
   bookmarkView.render(model.state.bookmarks);
 };
 
+const controlAddRecipe = async function (newRecipe) {
+  try {
+    // Upload new recipe data
+    await model.uploadRecipe(newRecipe);
+  } catch (err) {
+    console.error('💥', err);
+    addRecipeView.renderError(err.message);
+  }
+};
+
 const init = function () {
   bookmarkView.addHandlerRender(controlBookmarks);
   // Publisher : addHandlerRender
@@ -118,6 +129,8 @@ const init = function () {
   recipeView.addHandlerUpdateServings(controlServings);
 
   recipeView.addHandlerBookmark(controlAddBookmark);
+
+  addRecipeView.addHandlerUpload(controlAddRecipe);
 };
 
 init();
