@@ -3,6 +3,14 @@ import icons from 'url:../../img/icons.svg';
 export default class View {
   _data;
 
+  /**
+   *
+   * @param {*} data
+   * @param {*} render dff
+   * @returns {undefined | string}
+   * @this {Object} View instance
+   */
+
   render(data, render = true) {
     // Data doesn't exist or array is empty
     if (!data || (Array.isArray(data) && data.length === 0))

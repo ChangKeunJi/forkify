@@ -5,6 +5,7 @@ class addRecipeView extends View {
   // _data; : FROM VIEW
 
   _parentElement = document.querySelector('.upload');
+  _message = 'Recipe was uploaded :) ';
   _window = document.querySelector('.add-recipe-window');
   _overlay = document.querySelector('.overlay');
   _btnOpen = document.querySelector('.nav__btn--add-recipe');
@@ -35,7 +36,9 @@ class addRecipeView extends View {
     this._parentElement.addEventListener('submit', function (e) {
       e.preventDefault();
       const dataArr = [...new FormData(this)];
+      // Array [["servings", "23"],["cookingTime", "23"]..]
       const data = Object.fromEntries(dataArr);
+      // Object {servings:"23", cookingTime:"23"...}
       handler(data);
     });
   }

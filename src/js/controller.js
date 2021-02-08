@@ -1,4 +1,5 @@
 import * as model from './model.js'; // {state, loadRecipe, ..}
+import { MODAL_CLOSE_SEC } from './config.js';
 import recipeView from './views/recipeView.js'; // instance of Class. Can name any name.
 import searchView from './views/searchView.js';
 import resultsView from './views/resultsView.js';
@@ -102,14 +103,41 @@ const controlAddBookmark = function () {
   bookmarkView.render(model.state.bookmarks);
 };
 
+//! Add a bookmark to list in Navbar
 const controlBookmarks = function () {
   bookmarkView.render(model.state.bookmarks);
 };
 
+//! Uploading A new recipe
 const controlAddRecipe = async function (newRecipe) {
+  console.log(model.state.recipe);
+  console.log(newRecipe);
   try {
+    // Show loading spinner
+    addRecipeView.renderSpinner();
+
     // Upload new recipe data
     await model.uploadRecipe(newRecipe);
+
+    // Render recipe
+    recipeView.render(model.state.recipe);
+
+    // Success Message
+    addRecipeView.renderMessage();
+
+    // Render bookmark view
+    bookmarkView.render(model.state.bookmarks);
+
+    // Change ID in URL
+    // => pushState(state, title, url)
+    window.history.pushState(null, '', `#${model.state.recipe.id}`);
+
+    // Close form
+    setTimeout(function () {
+      addRecipeView.toggleWindow();
+    }, MODAL_CLOSE_SEC * 1000);
+
+    console.log(model.state.recipe);
   } catch (err) {
     console.error('💥', err);
     addRecipeView.renderError(err.message);
